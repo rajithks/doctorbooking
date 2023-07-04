@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<div style="background-color:lightblue;height:1000px;width:1500px">
+    <div style="background-color:yellow;height:60px;width:1500px">
+     <h1 style="color:red;text-align:center">Our neurology specialist</h1>
+    </div>
+    <br>
+    <div style="background-color:lightgreen;height:300px;width:180px">
+    <center><img src="{% static 'doctor2.jpg' %}" height="130px" width="150px" ></center>
+    <center><h3>Dr.rajesh kumar</h3></center>
+    <center>(MBBS,neuro specialist,PROF)</center>
+        <center><a href="2a">appointment here</a></center>
+    </div>
+<script>
+    $(document).ready(function)(){
+    $("#c")
+</script>
+
+</div>
+<div id="div" style="background-color:violet;height:250px;width:250px;text-align:center;position:absolute;margin:200px;">
+<h1>-----soften-----</h1>
+    </div>
+<button id="c">click</button>
+<script>
+    $(document).ready(function(){
+    $("#c").click(function(){
+    $("#div").animate({left:300});
+     $("#div").animate({bottom:300});
+      $("#div").animate({right:300});
+      $("#div").animate({top:300});
+    });
+    });
+
+</script>
+</body>
+</html>

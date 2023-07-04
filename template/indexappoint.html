@@ -1,0 +1,430 @@
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>	
+<head>
+	{% load static %}
+<title>Remedial Appointment Form with Flat Responsive widget Design :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="keywords" content="Remedial Appointment Form Bootstrap Responsive Templates, Iphone Compatible Templates, Smartphone Compatible Templates, Ipad Compatible Templates, Flat Responsive Templates"/>
+<link href="{% static 'cssappoint/easy-responsive-tabs.css' %}" rel='stylesheet' type='text/css'/>
+<link href="{% static 'cssappoint/jquery-ui.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'cssappoint/style.css' %}" rel='stylesheet' type='text/css' />
+<!--webfonts-->
+<link href="//fonts.googleapis.com/cssappoint?family=Open+Sans:400,600,700" rel="stylesheet">
+<!--//webfonts-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="logo-agileits">
+    <a href="appointment.html"><button type="button" class="btn btn-dark">back</button></a>
+</div>
+ <h1>APPOINTMENT FORM</h1>
+	<div class="container">
+			<div class="w3-agileits-team-title"> 
+				
+				
+			<div id="horizontalTab">
+					<ul class=" resp-tabs-list">
+					<li>
+<!--						<img src="{% static 'imagesappoint/tm1.jpg' %}" alt=" " class="img-responsive" />-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<img src="{% static 'imagesappoint/tm2.jpg' %}" alt=" " class="img-responsive" />-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<img src="{% static 'imagesappoint/tm3.jpg' %}" alt=" " class="img-responsive" />-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<img src="{% static 'imagesappoint/tm4.jpg' %}" alt=" " class="img-responsive" />-->
+					</li>
+					</ul>
+					<div class=" resp-tabs-container">
+					<div class="tab1">
+
+						<div class="team-img-w3-agile">
+						<img src="{% static 'imagesappoint/tm11.png' %}" alt=" " class="img-responsive" />
+						<h4></h4>
+							<span></span>
+<!--							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit .</p>-->
+						</div>
+
+
+
+
+						<div class=" team-Info-agileits">
+						<div class=" register-form">
+							<form action="appointments" method="post">
+								<div class="fields-grid">
+							 		{% csrf_token %}
+
+									<input type="text" name="a1" placeholder="name" required=""><br>
+									<br>
+									<input type="text" name="a2" placeholder="op number" required=""><br>
+									<br>
+									<input type="text" name="a3" placeholder="phone number" required=""><br>
+									<select name="a4" class=" register-form"required="required"><br>
+										{% for i in m %}
+										<option selected="selected" disabled="disabled" value="{{i}}">date</option><br>
+										<option value="{{i}}">{{i}}</option>
+										{% endfor %}
+									</select><br>
+									<br>
+									<br>
+									<br>
+									{% for i in s %}
+									<input type="text" name="a5"  placeholder="time" value="{{i.datetime}}" required=""><br>
+									<br>
+									<input type="text" name="a6" value="{{i.department}}" readonly><br>
+									<br>
+									<input type="text" name="a7" value="{{i.name}}" readonly><br>
+
+									<br>
+									<input type="submit" value="appointment"><br>
+									{% endfor %}
+							</form>
+
+<!--								<input type="text" name="Your name" placeholder="Patients Name" required=""> -->
+<!--								<input type="email" name="Email" placeholder="email" required="">-->
+<!--							<input type="text" name="text" placeholder="Phone Number" required=""> -->
+<!--							-->
+<!--							<div class="styled-input">-->
+<!--								<h2>Sex :</h2>-->
+<!--								  <input type="radio" name="gender" value="male"> Male-->
+<!--								  <input type="radio" name="gender" value="female"> Female-->
+<!--							</div>-->
+<!--							-->
+<!--							<div class="styled-input">-->
+<!--								<select id="category2" required="">-->
+<!--									<option value="">Choose Hospital*</option>-->
+<!--									<option value="">Hospital 1</option>-->
+<!--									<option value="">Hospital 2</option>-->
+<!--									<option value="">Hospital 3</option>-->
+<!--									<option value="">Hospital 4</option>-->
+<!--									<option value="">Hospital 5</option>-->
+<!--								</select>-->
+<!--								<span></span>-->
+<!--							</div>-->
+<!--							<div class="styled-input">-->
+<!--							<input class="date" id="datepicker" name="Text" type="text" value="MM/DD/YYYY" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'MM/DD/YYYY';}"  required="">-->
+<!--							</div>	-->
+<!--								<div class="content-wthree2">-->
+<!--									<div class="grid-w3layouts1">-->
+<!--										<div class="w3-agile1">-->
+<!--											<label class="rating">Taking any medications currently?<span>*</span></label>-->
+<!--											<ul>-->
+<!--												<li>-->
+<!--													<input type="radio" id="a-option" name="selector1">-->
+<!--													<label for="a-option">Yes </label>-->
+<!--													<div class="check"></div>-->
+<!--												</li>-->
+<!--												<li>-->
+<!--													<input type="radio" id="b-option" name="selector1">-->
+<!--													<label for="b-option">No</label>-->
+<!--													<div class="check"><div class="inside"></div></div>-->
+<!--												</li>-->
+<!--											</ul>-->
+<!--												<div class="clear"></div>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									<div class="clear"></div>-->
+<!--								</div>-->
+<!--								<div class="styled-input">-->
+<!--							-->
+<!--									<textarea name="text" placeholder="If Yes, Please List It"></textarea>-->
+<!--								</div>-->
+<!--								<input type="submit" name="submit" value="Book Appointment">-->
+<!--							-->
+<!--						</div>-->
+<!--						-->
+
+
+
+<!--							<center>do you not register</center>-->
+							<br>
+<!--							<center><a href="index.html">register here</a></center>-->
+
+				</div>
+							{% for i in messages %}
+							<h3><p class="text-white bg-dark">{{i}}</h3></p>
+							{% endfor %}
+<!--						</div>-->
+<!--						<div class="clear"> </div>-->
+<!--					</div>-->
+<!--					-->
+<!--					<div class="tab2">-->
+<!--					<div class=" team-img-w3-agile">-->
+<!--					<img src="{% static 'imagesappoint/tm22.png' %}" alt=" " class="img-responsive" />-->
+<!--					<h4>Sarah Connor</h4>-->
+<!--							<span>Dentist</span>-->
+<!--							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit .</p>-->
+<!--						</div>-->
+<!--						<div class=" team-Info-agileits">-->
+<!--						<div class=" register-form">-->
+<!--					<form action="#" method="post">-->
+<!--					<div class="fields-grid">-->
+							
+<!--								<input type="text" name="Your name" placeholder="Patients Name" required=""> -->
+<!--								<input type="email" name="Email" placeholder="email" required="">-->
+<!--							<input type="text" name="text" placeholder="Phone Number" required=""> -->
+<!--							-->
+<!--							<div class="styled-input">-->
+<!--								<h2>Sex :</h2>-->
+<!--								  <input type="radio" name="gender" value="male"> Male-->
+<!--								  <input type="radio" name="gender" value="female"> Female-->
+<!--							</div>-->
+<!--							-->
+<!--							<div class="styled-input">-->
+<!--								<select id="category2" required="">-->
+<!--									<option value="">Choose Hospital*</option>-->
+<!--									<option value="">Hospital 1</option>-->
+<!--									<option value="">Hospital 2</option>-->
+<!--									<option value="">Hospital 3</option>-->
+<!--									<option value="">Hospital 4</option>-->
+<!--									<option value="">Hospital 5</option>-->
+<!--								</select>-->
+<!--								<span></span>-->
+<!--							</div>-->
+<!--							<div class="styled-input">-->
+<!--							<input class="date" id="datepicker" name="Text" type="text" value="MM/DD/YYYY" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'MM/DD/YYYY';}"  required="">-->
+<!--							</div>	-->
+<!--								<div class="content-wthree2">-->
+<!--									<div class="grid-w3layouts1">-->
+<!--										<div class="w3-agile1">-->
+<!--											<label class="rating">Taking any medications currently?<span>*</span></label>-->
+<!--											<ul>-->
+<!--												<li>-->
+<!--													<input type="radio" id="a-option" name="selector1">-->
+<!--													<label for="a-option">Yes </label>-->
+<!--													<div class="check"></div>-->
+<!--												</li>-->
+<!--												<li>-->
+<!--													<input type="radio" id="b-option" name="selector1">-->
+<!--													<label for="b-option">No</label>-->
+<!--													<div class="check"><div class="inside"></div></div>-->
+<!--												</li>-->
+<!--											</ul>-->
+<!--												<div class="clear"></div>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									<div class="clear"></div>-->
+<!--								</div>-->
+<!--								<div class="styled-input">-->
+<!--									<textarea name="message" placeholder="If Yes, Please List It"></textarea>-->
+<!--								</div>-->
+<!--								<input type="submit" name="submit" value="Book Appointment">-->
+<!--							-->
+<!--						</div>-->
+<!--						-->
+					</form>
+						
+				</div>							
+						</div>
+<!--						<div class="clear"> </div>-->
+<!--					</div>-->
+<!--					<div class="tab3">-->
+<!--						<div class=" team-img-w3-agile">-->
+<!--						<img src="{% static 'imagesappoint/tm33.png' %}" alt=" " class="img-responsive" />-->
+<!--							<h4>Ivan Simpson</h4>-->
+<!--							<span>Radiologist</span>-->
+<!--							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit .</p>-->
+<!--						</div>-->
+<!--						<div class=" team-Info-agileits">-->
+<!--						<div class=" register-form">-->
+<!--					<form action="#" method="post">-->
+<!--						<div class="fields-grid">-->
+<!--							-->
+<!--								<input type="text" name="Your name" placeholder="Patients Name" required=""> -->
+<!--								<input type="email" name="Email" placeholder="email" required="">-->
+<!--							<input type="text" name="text" placeholder="Phone Number" required="">-->
+<!--							-->
+<!--							<div class="styled-input">-->
+<!--								<h2>Sex :</h2>-->
+<!--								  <input type="radio" name="gender" value="male"> Male-->
+<!--								  <input type="radio" name="gender" value="female"> Female-->
+<!--							</div>-->
+<!--							-->
+<!--							<div class="styled-input">-->
+<!--								<select id="category2" required="">-->
+<!--									<option value="">Choose Hospital*</option>-->
+<!--									<option value="">Hospital 1</option>-->
+<!--									<option value="">Hospital 2</option>-->
+<!--									<option value="">Hospital 3</option>-->
+<!--									<option value="">Hospital 4</option>-->
+<!--									<option value="">Hospital 5</option>-->
+<!--								</select>-->
+<!--								<span></span>-->
+<!--							</div>-->
+<!--							<div class="styled-input">-->
+<!--							<input class="date" id="datepicker" name="Text" type="text" value="MM/DD/YYYY" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'MM/DD/YYYY';}"  required="">-->
+<!--							</div>	-->
+<!--								<div class="content-wthree2">-->
+<!--									<div class="grid-w3layouts1">-->
+<!--										<div class="w3-agile1">-->
+<!--											<label class="rating">Taking any medications currently?<span>*</span></label>-->
+<!--											<ul>-->
+<!--												<li>-->
+<!--													<input type="radio" id="a-option" name="selector1">-->
+<!--													<label for="a-option">Yes </label>-->
+<!--													<div class="check"></div>-->
+<!--												</li>-->
+<!--												<li>-->
+<!--													<input type="radio" id="b-option" name="selector1">-->
+<!--													<label for="b-option">No</label>-->
+<!--													<div class="check"><div class="inside"></div></div>-->
+<!--												</li>-->
+<!--											</ul>-->
+<!--												<div class="clear"></div>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									<div class="clear"></div>-->
+<!--								</div>-->
+<!--								<div class="styled-input">-->
+<!--									<textarea name="message" placeholder="If Yes, Please List It"></textarea>-->
+<!--								</div>-->
+<!--								<input type="submit" name="submit" value="Book Appointment">-->
+<!--							-->
+<!--						</div>-->
+<!--						-->
+					</form>
+						
+				</div>
+													
+						</div>
+<!--						<div class="clear"> </div>-->
+<!--					</div>-->
+<!--					<div class="tab4">-->
+<!--					<div class=" team-img-w3-agile">-->
+<!--					<img src="{% static 'imagesappoint/tm44.png' %}" alt=" " class="img-responsive" />-->
+<!--						<h4>Marc Gutierrez</h4>-->
+<!--							<span>Dermatologist</span>-->
+<!--							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit .</p>-->
+<!--						</div>-->
+<!--						<div class=" team-Info-agileits">-->
+<!--						<div class=" register-form">-->
+<!--					<form action="#" method="post">-->
+<!--						<div class="fields-grid">-->
+<!--							-->
+<!--								<input type="text" name="Your name" placeholder="Patients Name" required=""> -->
+<!--								<input type="email" name="Email" placeholder="email" required="">-->
+<!--						<input type="text" name="text" placeholder="Phone Number" required=""> -->
+<!--							-->
+<!--							<div class="styled-input">-->
+<!--								<h2>Sex :</h2>-->
+<!--								  <input type="radio" name="gender" value="male"> Male-->
+<!--								  <input type="radio" name="gender" value="female"> Female-->
+<!--							</div>-->
+<!--							-->
+<!--							<div class="styled-input">-->
+<!--								<select id="category2" required="">-->
+<!--									<option value="">Choose Hospital*</option>-->
+<!--									<option value="">Hospital 1</option>-->
+<!--									<option value="">Hospital 2</option>-->
+<!--									<option value="">Hospital 3</option>-->
+<!--									<option value="">Hospital 4</option>-->
+<!--									<option value="">Hospital 5</option>-->
+<!--								</select>-->
+<!--								<span></span>-->
+<!--							</div>-->
+<!--							<div class="styled-input">-->
+<!--							<input class="date" id="datepicker" name="Text" type="text" value="MM/DD/YYYY" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'MM/DD/YYYY';}"  required="">-->
+<!--							</div>	-->
+<!--								<div class="content-wthree2">-->
+<!--									<div class="grid-w3layouts1">-->
+<!--										<div class="w3-agile1">-->
+<!--											<label class="rating">Taking any medications currently?<span>*</span></label>-->
+<!--											<ul>-->
+<!--												<li>-->
+<!--													<input type="radio" id="a-option" name="selector1">-->
+<!--													<label for="a-option">Yes </label>-->
+<!--													<div class="check"></div>-->
+<!--												</li>-->
+<!--												<li>-->
+<!--													<input type="radio" id="b-option" name="selector1">-->
+<!--													<label for="b-option">No</label>-->
+<!--													<div class="check"><div class="inside"></div></div>-->
+<!--												</li>-->
+<!--											</ul>-->
+<!--												<div class="clear"></div>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									<div class="clear"></div>-->
+<!--								</div>-->
+<!--							-->
+<!--									-->
+<!--									<textarea name="message" placeholder="If Yes, Please List It"></textarea>-->
+<!--									-->
+<!--								-->
+<!--								<input type="submit" name="submit" value="Book Appointment">-->
+<!--							-->
+<!--						</div>-->
+<!--						-->
+					</form>
+						
+				</div>
+													
+						</div>
+						<div class="clear"> </div>
+					</div>
+					</div>
+					<div class="clear"> </div>
+					
+			</div>
+	</div>
+ </div>
+
+		
+		<div class="copyright">
+		
+		
+			<p>&copy; 2018 Remedial Appointment Form . All rights reserved | Design by <a href="http://w3layouts.com">w3layouts</a></p>
+		
+		
+	</div>
+	
+ 	
+	<!--tabs-->	
+<script src="{% static 'jsappoint/jquery.min.js' %}"></script>
+<script src="{% static 'jsappoint/easy-responsive-tabs.js' %}"></script>
+<script>
+$(document).ready(function () {
+$('#horizontalTab').easyResponsiveTabs({
+type: 'default', //Types: default, vertical, accordion           
+width: 'auto', //auto or any width like 600px
+fit: true,   // 100% fit in a container
+closed: 'accordion', // Start closed if in accordion view
+activate: function(event) { // Callback function if tab is switched
+var $tab = $(this);
+var $info = $('#tabInfo');
+var $name = $('span', $info);
+$name.text($tab.text());
+$info.show();
+}
+});
+$('#verticalTab').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+});
+</script>
+<!--//tabs-->
+<!-- Calendar -->
+<script src="{% static 'jsappoint/jquery-ui.js' %}"></script>
+	<script>
+		$(function() {
+		$( "#datepicker,#datepicker1" ).datepicker();
+		});
+	</script>
+<!-- //Calendar -->
+</body>
+</html>

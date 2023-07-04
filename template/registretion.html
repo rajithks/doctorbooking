@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	{% load static %}
+	<title>Trendz Login Form Responsive Widget Template :: W3layouts</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords"
+		content="Trendz Login Form Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tag Keywords -->
+	<!--/Style-CSS -->
+	<link rel="stylesheet" href="{% static 'csslogin/style.css' %}" type="text/css" media="all" />
+	<!--//Style-CSS -->
+</head>
+
+<body>
+	<!-- /login-section -->
+
+	<section class="w3l-forms-23">
+		<div class="forms23-block-hny">
+			<div class="wrapper">
+				<h1>ADNUX HOSPITAL</h1>
+				<!-- if logo is image enable this
+					<a class="logo" href="index.html">
+					  <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+					</a>
+				-->
+				<div class="d-grid forms23-grids">
+					<div class="form23">
+						<div class="main-bg">
+							<h6 class="sec-one">WE ARE WITH YOU</h6>
+							<div class="speci-login first-look">
+								<img src="{% static 'imageslogin/user.png' %}" alt="" class="img-responsive">
+							</div>
+						</div>
+						<div class="bottom-content">
+
+							<form action="register" method="post">
+								{% csrf_token %}
+								<input type="text" name="n1" class="input-form" placeholder="name" required=""><br>
+								<br>
+								<input type="text" name="n2" class="input-form" placeholder="age" required=""><br>
+								<br>
+								<input type="text" name="n3" class="input-form" placeholder="phone number" required=""><br>
+								<br>
+								<select name="n4" class="input-form" required="">
+									<option selected="selected" disabled="disabled" value="">gender</option>
+									<option value="male">male</option>
+									<option value="female">female</option>
+									<option value="trans">others</option>
+								</select>
+								<br>
+								<input type="text" name="n5" class="input-form" placeholder="adress" required=""><br>
+								<br>
+								<input type="text" name="n6" class="input-form" placeholder="password" required=""><br>
+								<br>
+								<input type="submit" class="loginhny-btn btn" value="SUBMIT">
+
+							</form>
+							<p>go to <a href="userpage">login!</a></p>
+						</div>
+					</div>
+					{% for i in messages %}
+					{{i}}
+					{% endfor %}
+				</div>
+				<div class="w3l-copy-right text-center">
+					<p>© 2020 Trendz Login Form. All rights reserved | Design by
+						<a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- //login-section -->
+</body>
+</html>
+

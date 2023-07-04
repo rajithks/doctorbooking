@@ -1,0 +1,138 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	{% load static %}
+	<title>Sky Coming Soon Responsive Widget Template : W3Layouts</title>
+
+	<!-- Meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- Style -->
+	<link rel="stylesheet" href="{% static 'cssbg/style.css' %}" type="text/css" media="all" />
+<!--	33333333333333333333-->
+	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<!-- coming soon -->
+	<section class="w3l-coming-soon-block">
+		<div class="coming-section">
+<!--			<div class="logo-agileits">-->
+				<a href="appointment.html"><button type="button" class="btn btn-dark">back</button></a>
+<!--			</div>-->
+			<div class="logo">
+				<h1><a class="text-light bg-dark">TOCKENS</a></h1>
+			</div>
+			<div class="wrapper">
+				<main class="content">
+					<div class="right">
+
+							{% for i in s %}
+							{% if i.status %}
+							Your Appointment Request has been <strong>Approved</strong><br>
+							<br>
+							<b>token number:{{i.number}}</b><br>
+							<br>
+							<b>doctor name:{{i.doctor}}</b><br>
+							<br>
+							<b>department:{{i.department}}</b><br>
+							<br>
+							<b>patient name:{{i.patient}}</b><br>
+							{% else %}
+							Your Appointment Request is <strong>Pending<strong>
+							{% endif %}
+							{% endfor %}
+<!--						<h1>We Are Coming Very soon!</h1>-->
+<!---->
+<!--						<div class="subscribe-form">-->
+<!--							<h4 class="update">Keep Updated</h4>-->
+<!--							<form action="#" method="GET">-->
+<!--								<input id="form-email" name="form-email" type="email" placeholder="Your email address.." />-->
+<!--								<button type="submit" class="btn theme-submit-button">Submit</button>-->
+<!--							</form>-->
+							<p class="subscribe">Enter your email address and we'll let you know as soon as it's ready</p>
+						</div>
+					</div>
+					<div class="left">
+
+<!--						<div class="countdown">-->
+<!--							<div class="countdown__days">-->
+<!--								<div class="number"></div>-->
+<!--								<span class>Days</span>-->
+<!--							</div>-->
+
+<!--							<div class="countdown__hours">-->
+<!--								<div class="number"></div>-->
+<!--								<span class>Hours</span>-->
+<!--							</div>-->
+
+<!--							<div class="countdown__minutes">-->
+<!--								<div class="number"></div>-->
+<!--								<span class>Minutes</span>-->
+<!--							</div>-->
+
+<!--							<div class="countdown__seconds">-->
+<!--								<div class="number"></div>-->
+<!--								<span class>Seconds</span>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</main>-->
+<!--			</div>-->
+
+
+			<!-- copyright -->
+			<div class="copy-right">
+				<p>&copy; 2020 Sky Coming Soon. All rights reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3Layouts</a></p>
+			</div>
+			<!-- //copyright -->
+			<script>
+				(() => {
+					// Specify the deadline date
+					const deadlineDate = new Date('November 28, 2021 23:59:59').getTime();
+
+					// Cache all countdown boxes into consts
+					const countdownDays = document.querySelector('.countdown__days .number');
+					const countdownHours = document.querySelector('.countdown__hours .number');
+					const countdownMinutes = document.querySelector('.countdown__minutes .number');
+					const countdownSeconds = document.querySelector('.countdown__seconds .number');
+
+					// Update the count down every 1 second (1000 milliseconds)
+					setInterval(() => {
+						// Get current date and time
+						const currentDate = new Date().getTime();
+
+						// Calculate the distance between current date and time and the deadline date and time
+						const distance = deadlineDate - currentDate;
+
+						// Calculations the data for remaining days, hours, minutes and seconds
+						const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+						const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+						const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+						const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+						// Insert the result data into individual countdown boxes
+						countdownDays.innerHTML = days;
+						countdownHours.innerHTML = hours;
+						countdownMinutes.innerHTML = minutes;
+						countdownSeconds.innerHTML = seconds;
+					}, 1000);
+				})();
+			</script>
+		</div>
+	</section>
+
+	<!-- coming soon -->
+</body>
+
+</html>
